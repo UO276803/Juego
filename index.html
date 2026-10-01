@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#fff7f8">
+  <title>Misión: Sacarte una Sonrisa 🩺</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">MISIÓN ESPECIAL</div>
+        <h1>Sacarte una sonrisa 🩺</h1>
+      </div>
+      <button id="restartTop" class="small-btn" type="button">↻ Reiniciar</button>
+    </header>
+
+    <section class="intro" id="intro">
+      <div class="intro-icon">🩺</div>
+      <h2>Hoy tienes una misión diferente</h2>
+      <p>
+        Tu turno termina cuando consigas llegar hasta el final del hospital.
+        Recoge corazones, evita los virus y, sobre todo, no te olvides de sonreír.
+      </p>
+      <button id="startBtn" class="primary-btn" type="button">Empezar misión </button>
+    </section>
+
+    <section class="game-area" id="gameArea" aria-label="Juego de plataformas">
+      <div class="hud">
+        <div>❤️ <span id="lives">3</span></div>
+        <div>⭐ <span id="score">0</span></div>
+        <div>🏥 <span id="distance">0%</span></div>
+      </div>
+
+      <div class="sky">
+        <div class="cloud cloud-1">☁️</div>
+        <div class="cloud cloud-2">☁️</div>
+        <div class="hospital-sign">🏥 HOSPITAL</div>
+      </div>
+
+      <div class="world" id="world">
+        <div class="world-content" id="worldContent">
+          <div class="ground"></div>
+          <div class="player" id="player" aria-label="Enfermera">👩‍⚕️</div>
+          <div class="finish" id="finish">🚪<span>HABITACIÓN<br>ESPECIAL</span>💗</div>
+        </div>
+      </div>
+
+      <div class="mobile-controls" aria-label="Controles">
+        <div class="movement-controls">
+          <button class="control-btn" id="leftBtn" type="button" aria-label="Mover a la izquierda">◀</button>
+          <button class="control-btn" id="rightBtn" type="button" aria-label="Mover a la derecha">▶</button>
+        </div>
+        <button class="jump-btn" id="jumpBtn" type="button" aria-label="Saltar">⬆️</button>
+      </div>
+
+      <div class="game-message" id="gameMessage" aria-live="polite"></div>
+    </section>
+
+    <section class="help" id="help">
+      <span>👈👉 Muévete</span>
+      <span>⬆️ Salta</span>
+      <span>💗 Recoge corazones</span>
+      <span>🦠 Evita los virus</span>
+    </section>
+
+    <section class="ending" id="ending">
+      <div class="ending-card">
+        <div class="big-heart">💗</div>
+        <div class="eyebrow">MISIÓN COMPLETADA</div>
+        <h2>Lo has conseguido.</h2>
+        <p id="finalText">
+          Has llegado hasta el final. Ahora queda la parte más importante:
+          descansar, respirar y sonreír un poquito.
+        </p>
+        <div class="personal-note">
+          <strong>Tu única obligación ahora:</strong><br>
+          cuidarte tanto como cuidas a los demás. 🩺
+        </div>
+        <button id="restartBtn" class="primary-btn" type="button">Jugar otra vez ↻</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
